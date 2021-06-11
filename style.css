@@ -1,0 +1,424 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+background-image: linear-gradient(-45deg, orange, red, orangered, yellow);
+  background-size: 400%, 400%;
+  animation-name: change;
+  animation-duration: 40s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+/*body background animation*/
+@keyframes change{
+  0%{
+    background-position: 0 50%
+  }
+  50%{
+    background-position: 100% 50%
+  }
+  100%{
+    background-position: 0 50%
+  }
+}
+
+/*Nav*/
+.nav{
+  position: fixed;
+  top: 45vh;
+  left: 0;
+  background-color: grey;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 10px;
+  background: rgba(255,255,255, 0.2);
+  border-bottom: 1px solid rgba(255,255,255, 0.6);
+  border-right: 1px solid rgba(255,255,255, 0.6);
+  transition-duration: 0.7s;
+  transition-timing-function: linear;
+}
+
+.nav i{
+  position: relative;
+  color: white;
+  height: 15px;
+  font-size: 2vw;
+  margin: 5px;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+}
+
+.nav i:hover{
+  transform: scale(1.3);
+}
+
+
+
+
+
+
+.page-container{
+  height: 100vh;
+  width: 100vw;
+  display:flex;
+}
+
+.left-hand{
+  height: 100%;
+  width: 50%;
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card{
+  height: 500px;
+  width: 350px;
+  border-radius: 10px;
+  border-bottom: 1px solid rgba(255,255,255, 0.6);
+  border-right: 1px solid rgba(255,255,255, 0.6);
+  background-color: rgba(255,255,255, 0.4);
+}
+
+.card:hover{
+
+}
+
+.content{
+  height: 100%;
+  width: 100;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.top-half{
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.picture{
+  height: 220px;
+  width: 220px;
+  border-radius: 50%;
+  border-bottom: 1px solid rgba(255,255,255, 0.6);
+  border-right: 1px solid rgba(255,255,255, 0.6);
+  /*background-image: url('./profile.jpg');
+  background-position: center;
+  background-size: cover;*/
+}
+
+.picture img{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  opacity: 0.8;
+}
+
+.bottom-half{
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.bottom-half h3{
+  font-size: 20px;
+}
+
+.bottom-half .links{
+  width: 75%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.links i{
+  color: white;
+}
+
+
+.right-hand{
+  height: 100%;
+  width: 50%;
+  flex: 1 1 auto;
+  position: relative;
+}
+
+.text{
+  height: 10%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text h2{
+  font-family: 'Dancing Script', cursive;
+  font-size: 3vw;
+}
+
+.project{
+  position: absolute;
+  border-radius: 50%;
+  border-bottom: 1px solid rgba(255,255,255, 0.6);
+  border-right: 1px solid rgba(255,255,255, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.project h3{
+  color: rgba(255, 255, 255, 0.6);
+  font-family: 'Dancing Script', cursive;
+  font-size: 2vw;
+
+}
+
+.project-1{
+  height: 17vw;
+  width: 17vw;
+  top: 1vw;
+  left: 1vw;
+  background-color: rgba(40,217,237, 0.9);
+  animation-name: projectOneAnimation;
+  animation-duration: 40s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  transition-duration: 2s;
+}
+
+.project:hover{
+  transform: scale(2.5);
+}
+
+
+@keyframes projectOneAnimation{
+  0%{
+    top: 1vw;
+    left: 1vw;
+  }
+  25%{
+    top: 20vw;
+    left: 20vw;
+  }
+  50%{
+    top: 35vw;
+  }
+  100%{
+    top: 1vw%;
+    left: 1vw%;
+  }
+}
+
+.project-2{
+  height: 17vw;
+  width: 17vw;
+  top: 20vw;
+  left: 30vw;
+  background-color: rgba(40,217,237, 0.3);
+  animation-name: projectTwoAnimation;
+  animation-duration: 50s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  background-color: rgba(250,35,243, 0.9);
+  transition-duration: 2s;
+}
+
+@keyframes projectTwoAnimation{
+  0%{
+    top: 17vw;
+    left: 17vw;
+  }
+  25%{
+    top: 1vw;
+    left: 1vw;
+  }
+  50%{
+    top: 30vw;
+    left: 30vw;
+  }
+  100%{
+    top: 17vw%;
+    left: 17vw%;
+  }
+}
+
+.project-3{
+  height: 17vw;
+  width: 17vw;
+  top: 39vw;
+  left: 9vw;
+  background-color: rgba(243,255,54, 0.3);
+  animation-name: projectThreeAnimation;
+  animation-duration: 50s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  transition-duration: 2s;
+}
+
+
+@keyframes projectThreeAnimation{
+  0%{
+    top: 17vw;
+    left: 5vw;
+  }
+  25%{
+    top: 5vw;
+    left: 25vw;
+  }
+  50%{
+    top: 35vw;
+  }
+  100%{
+    top: 17vw%;
+  }
+}
+
+@media (max-width: 900px)
+  {
+    .page-container{
+      flex-direction: column;
+    }
+
+    .left-hand{
+      width: 100%;
+      margin-top: 6vh;
+    }
+
+    .right-hand{
+      width: 100%;
+    }
+
+  @keyframes projectOneAnimation{
+  0%{
+    top: 1vw;
+    left: 1vw;
+  }
+  25%{
+    top: 40vw;
+    left: 40vw;
+  }
+  50%{
+    top: 70vw;
+  }
+  100%{
+    top: 1vw%;
+    left: 1vw%;
+  }
+}
+
+  @keyframes projectTwoAnimation{
+  0%{
+    top: 34vw;
+    left: 34vw;
+  }
+  25%{
+    top: 1vw;
+    left: 1vw;
+  }
+  50%{
+    top: 60vw;
+    left: 60vw;
+  }
+  100%{
+    top: 34vw%;
+    left: 34vw%;
+  }
+}
+
+  @keyframes projectThreeAnimation{
+  0%{
+    top: 34vw;
+    left: 10vw;
+  }
+  25%{
+    top: 10vw;
+    left: 50vw;
+  }
+  50%{
+    top: 70vw;
+  }
+  100%{
+    top: 34vw%;
+  }
+}
+
+  }
+
+@media (max-width: 400px)
+  {
+    .page-container{
+      flex-direction: column;
+      margin-top: 10vh;
+      padding-top: 10vh;
+    }
+
+    .left-hand{
+      width: 100%;
+      margin-top: 6vh;
+    }
+
+    .right-hand{
+      width: 100%;
+    }
+
+    .nav{
+      top: 0;
+      left: 35vw;
+      display: flex;
+      border-radius: 5px;
+      margin: 10px;
+    }
+
+    .project{
+      height: 30vw;
+      width: 30vw;
+    }
+
+    .nav i{
+      font-size: 9vw;
+    }
+
+    body{
+      background-color: white;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
